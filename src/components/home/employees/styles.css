@@ -1,0 +1,8 @@
+div#example_length {
+    margin-left: 127px;
+}
+a.btn.btn-primary.button {
+    position: absolute;
+    top: -6px;
+    z-index: 3;
+}
