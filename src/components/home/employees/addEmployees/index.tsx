@@ -13,10 +13,10 @@ export const AddEmploye = () => {
         navigate('/home');
     }
 
-    const validaVacio = (valor: any) => {
+    const validaVacio = (valor: any): boolean => {
         return valor && valor.trim().length && valor.length < 31;
     }
-    const AddNewEmploye = () => {
+    const AddNewEmploye = (): void => {
         if (validaVacio(name) &&
             validaVacio(lastName) &&
             validaVacio(birthDay)) {
@@ -40,7 +40,7 @@ export const AddEmploye = () => {
             </div>
             <div className="row">
                 <div className="col mt-5">
-                    <h4>Agregar Empleado</h4>
+                    <p className="fs-3 mt-3">Agregar Empleado</p>
                 </div>
             </div>
             <div className="row">

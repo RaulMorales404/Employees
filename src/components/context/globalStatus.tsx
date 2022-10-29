@@ -8,7 +8,7 @@ interface Props {
 
 export const StorProvider = ({ children }: Props) => {
     const [employeesContext, setEmployeesContext] = useState<Array<Employees>>([]);
-    const [userAuth, setUserAuth] = useState<User | Boolean>(localStorage.getItem("seccion") === 'true' ? true : false);
+    const [userAuth, setUserAuth] = useState<User | Boolean>(localStorage.getItem("seccion") === 'true');
 
     return (
         <GlobalState.Provider value={{

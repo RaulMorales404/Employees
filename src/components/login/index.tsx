@@ -9,37 +9,37 @@ export const Login = () => {
 
     const { setUserAuth } = useContext(GlobalState) as UserContextType;
     const navigate = useNavigate();
-    const [user, setUser] = useState("");
-    const [password, setPassword] = useState("");
+    const [user, setUser] = useState("Roberto");
+    const [password, setPassword] = useState("Exam123$%");
 
     useEffect(() => {
         localStorage.setItem('name', "Roberto")
         localStorage.setItem("password", "Exam123$%");
         localStorage.setItem("seccion", "false");
     }, [])
-    const validaVacio = (valor: any) => {
+    const validaVacio = (valor: any): boolean => {
         return valor && valor.trim().length;
     }
 
 
-    const doLogin = () => {
+    const doLogin = (): void => {
         validaVacio(user) && validaVacio(password) ? validateCredentials() : alert("credenciales incorrectas nombre de usuario o contraseña no válidos");
         setUser("");
         setPassword("");
     }
 
-    const startSeccion = () => {
+    const startSeccion = (): void => {
         localStorage.setItem("seccion", "true");
         setUserAuth(true);
         navigate('/home');
     }
-    const validateCredentials = () => {
+    const validateCredentials = (): void => {
         localStorage.getItem("name") === user &&
             localStorage.getItem("password") === password ?
             startSeccion() : alert("Credenciales No Son Validas");
     }
 
-    const blockAction = (id: string) => {
+    const blockAction = (id: string): void => {
         let myInput: any = document.getElementById(id);
         myInput.onpaste = (e: any) => {
             e.preventDefault();
@@ -74,7 +74,7 @@ export const Login = () => {
                         <input type="password" id="password" className="form-control" value={password} onChange={(event) => { setPassword(event.target.value) }} placeholder="Roberto123" />
                     </div>
                     <div className="col-8">
-                        <button className="btn btn-primary col-3 mt-3 offset-9" onClick={doLogin} type="button">Iniciar</button>
+                        <button className="btn btn-primary col-md-3 col-ms-12 mt-3 offset-md-9" onClick={doLogin} type="button">Iniciar</button>
                     </div>
                 </form>
 
@@ -82,3 +82,4 @@ export const Login = () => {
         </div>
     )
 }
+

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalState } from "../../context/globalStatus";
-import { EmployeesContextType,UserContextType} from '../../context/types';
+import { EmployeesContextType } from '../../context/types';
 import { useContext, useEffect } from 'react';
-import "./styles.css"
 import axios, { AxiosResponse } from "axios";
+import "./styles.css"
 
 export const Table = () => {
-   
-const { employeesContext,setEmployeesContext} = useContext(GlobalState) as EmployeesContextType;
-const[isLoading,setIsLoading] = useState(false);
+
+    const { employeesContext, setEmployeesContext } = useContext(GlobalState) as EmployeesContextType;
+    const [isLoading, setIsLoading] = useState(false);
 
 
     useEffect(() => {
@@ -18,13 +18,13 @@ const[isLoading,setIsLoading] = useState(false);
             .then((response: AxiosResponse) => {
                 setEmployeesContext(response.data.data.employees);
             });
-            setTimeout(() => {
-                setIsLoading(true)
-            }, 300);
-           
+        setTimeout(() => {
+            setIsLoading(true)
+        }, 300);
+
     }, []);
 
-    
+
     let employees = employeesContext.map((item) =>
         <tr>
             <td key={item.id} >{item.id}</td>
@@ -32,7 +32,7 @@ const[isLoading,setIsLoading] = useState(false);
             <td>{item.last_name}</td>
             <td>{item.birthday}</td>
         </tr>
-    )    
+    )
     $(document).ready(function () {
         ($('#example') as any).DataTable();
     });

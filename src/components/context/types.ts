@@ -16,5 +16,5 @@ export type EmployeesContextType = {
 
 export type UserContextType = {
     userAuth: Array<User>
-    setUserAuth: (value:Boolean) => void;
+    setUserAuth: (value: Boolean) => void;
 }

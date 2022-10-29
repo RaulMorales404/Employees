@@ -1,6 +1,14 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+nav.navbar.navbar-expand-lg.navbar-light.bg {
     width: 100%;
     position: fixed;
     z-index: 100;
     left: -1px;
+    background: #6C63FF;
+    color: #fff;
 }
+a.nav-link.active {
+    color: #fff !important;
+    border-bottom: 1px solid white;
+}
+
+/* #3c35a8; */

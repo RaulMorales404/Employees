@@ -6,6 +6,7 @@ import { Home } from '../home/index';
 import { NotFound } from "../notFound";
 import { UserContextType } from "../context/types";
 import { GlobalState } from "../context/globalStatus";
+import { Upload } from "../upload";
 export const Navegation = () => {
     const { userAuth } = useContext(GlobalState) as UserContextType;
     const RoutePrivate = () => {
@@ -18,9 +19,9 @@ export const Navegation = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/home" element={userAuth ? <Home /> : RoutePrivate()} />
                 <Route path="/new" element={userAuth ? <AddEmploye /> : RoutePrivate()} />
+                <Route path="/upload" element={userAuth ? <Upload /> : RoutePrivate()} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-
         </HashRouter>
     )
 }

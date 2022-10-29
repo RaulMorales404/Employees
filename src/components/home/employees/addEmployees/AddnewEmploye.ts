@@ -1,5 +1,5 @@
 import axios from "axios";
-const insertDataEmploye = (name: string, lastName: string, birthDay: string) => {
+const insertDataEmploye = (name: string, lastName: string, birthDay: string): Object => {
     let options = {
         url: "https://6edeayi7ch.execute-api.us-east-1.amazonaws.com/v1/examen/employees/:raul_Morales",
         data: {

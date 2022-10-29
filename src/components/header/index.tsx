@@ -16,7 +16,7 @@ export const Header = (props: Props) => {
     }
     return (
         <div className="col" >
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg">
                 <div className="container-fluid">
                     <a className="navbar-brand">Examen |</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">

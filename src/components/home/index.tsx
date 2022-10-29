@@ -10,7 +10,7 @@ export const Home = () => {
                 <Header activeButton={true} />
             </div>
             <div className="row mt-5">
-                <h4 className="mt-3">Empleados</h4>
+                <p className="fs-3 mt-3">Empleados</p>
             </div>
             <div className="row">
                 <Table></Table>
