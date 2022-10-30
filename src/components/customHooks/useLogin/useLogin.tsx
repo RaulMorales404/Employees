@@ -8,8 +8,8 @@ export const  useLogin = ()=> {
 
     const { setUserAuth } = useContext(GlobalState) as UserContextType;
     const navigate = useNavigate();
-    const [user, setUser] = useState("Roberto");
-    const [password, setPassword] = useState("Exam123$%");
+    const [user, setUser] = useState("");
+    const [password, setPassword] = useState("");
 
     useEffect(() => {
         localStorage.setItem('name', "Roberto")

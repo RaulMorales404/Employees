@@ -9,14 +9,16 @@ export const useUpload = () => {
         setAllFile(file);
     };
     const createLocalStora = () => {
-        localStorage.setItem('images', JSON.stringify(preViewImage));
-        setResultViewImage([]);
-        setPreViewImage([]);
-        setAllFile([]);
-        let getDataStoreImage: any = localStorage.getItem('images');
-        getDataStoreImage = JSON.parse(getDataStoreImage);
+        if (preViewImage[0] !== undefined) {
+            localStorage.setItem('images', JSON.stringify(preViewImage));
+            setResultViewImage([]);
+            setPreViewImage([]);
+            setAllFile([]);
+            let getDataStoreImage: any = localStorage.getItem('images');
+            getDataStoreImage = JSON.parse(getDataStoreImage);
+        }
     }
-    
+
     useEffect(() => {
         getImageLocalStore();
         geyImagePrevio();
