@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./styles.css"
 import { useNavigate } from 'react-router-dom';
 import insertDataEmploye from "./AddnewEmploye";
@@ -67,6 +67,7 @@ export const AddEmploye = () => {
                         <div className="col-auto d-flex justify-content-end ">
                             <button type="button" className="btn btn-danger col-sm-12 col-md-3  mt-3"
                                 onClick={() => { backTo() }}>Cancelar</button>
+                                
                             <button type="button" className="btn btn-primary  col-sm-12 col-md-3  mt-3 ml-3"
                                 onClick={() => { AddNewEmploye() }}>Guardar</button>
                         </div>

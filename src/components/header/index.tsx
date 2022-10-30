@@ -7,8 +7,11 @@ type Props = {
     activeButton: boolean
 }
 export const Header = (props: Props) => {
+    
     const navigate = useNavigate();
+
     const { setUserAuth } = useContext(GlobalState) as UserContextType;
+
     const closeSecction = () => {
         localStorage.setItem("seccion", "false");
         setUserAuth(false)
