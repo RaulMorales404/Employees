@@ -1,14 +1,9 @@
 import React from 'react';
-import { StorProvider } from './components/context/globalStatus';
-import { Navegation } from './components/routes';
-
-
+import { Navegation } from './routes';
 
 function App() {
   return (
-    <StorProvider>
-      <Navegation />
-    </StorProvider>
+    <Navegation />
   );
 }
 

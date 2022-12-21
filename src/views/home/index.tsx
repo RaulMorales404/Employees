@@ -1,6 +1,5 @@
 import React from "react";
-import { Header } from "../header";
-import { Table } from "./employees";
+import { Header } from "../../header";
 
 
 export const Home = () => {
@@ -13,7 +12,7 @@ export const Home = () => {
                 <p className="fs-3 mt-3">Empleados</p>
             </div>
             <div className="row">
-                <Table></Table>
+                a qui van los empleados
             </div>
         </div>
     )

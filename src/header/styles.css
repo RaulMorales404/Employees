@@ -3,12 +3,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg {
     position: fixed;
     z-index: 100;
     left: -1px;
-    background: #6C63FF;
+    background: #0087d6;
     color: #fff;
 }
 a.nav-link.active {
     color: #fff !important;
     border-bottom: 1px solid white;
 }
-
-/* #3c35a8; */
